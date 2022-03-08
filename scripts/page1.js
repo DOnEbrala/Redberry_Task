@@ -2,21 +2,54 @@ const fname = document.getElementById('fname')
 const lname = document.getElementById('lname')
 const email = document.getElementById('email')
 const phoneNumber = document.getElementById('number')
+const nextButton = document.getElementById("next");
+const prevButton = document.getElementById("prev");
 
-const form = document.getElementById('form')
-const errorElement = document.getElementById('error')
-var nextButton = document.getElementById("next");
+const pageData = getPageFromStorage('page1');
+
+var hasErrors = false;
+
+if (pageData != null) {
+  fname.value = pageData.firstName;
+  lname.value = pageData.lastName;
+  email.value = pageData.email;
+  phoneNumber.value = pageData.phoneNumber;
+}
+
+
 
 nextButton.addEventListener("click", function (e) {
-  debugger
-  e.preventDefault()
+
   checkInputs();
+  if (!hasErrors) {
+
+    let objToSave = generatePageObjectForSave();
+    savePageToStorage('page1', objToSave);
+    location.href = '../pages/Page2.html';
+  }
 
 })
 
+prevButton.addEventListener("click", function (e) {
+  let objToSave = generatePageObjectForSave();
+  savePageToStorage('page1', objToSave);
+  location.href = '../index.html';
+
+})
+
+function generatePageObjectForSave() {
+  let objectToSave = {
+    'firstName': fname.value,
+    'lastName': lname.value,
+    'email': email.value,
+    'phoneNumber': phoneNumber.value
+  };
+  return objectToSave;
+}
+
 
 function checkInputs() {
-  
+  hasErrors = false;
   if (fname.value === '' || fname.value == null) {
     setErrorFor(fname, 'First Name cannot be blank');
   }
@@ -58,6 +91,7 @@ function checkInputs() {
 }
 
 function setErrorFor(input, message) {
+  hasErrors = true;
   const formControl = input.parentElement;
   const small = formControl.querySelector('small');
   formControl.className = 'form-control error';
@@ -74,5 +108,6 @@ function isEmail(email) {
 }
 
 function isPhoneNumber(phone) {
-  return /((\+995))5[0-9]{8}$/.test(phone);
+  phone = phone.replace(/\s+/g, '');
+  return /5[0-9]{6}$/.test(phone);
 }
