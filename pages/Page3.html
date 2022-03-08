@@ -64,10 +64,46 @@
 
         </div>
 
-        <label for="start"> When? </label>
+        <div class="time">
+            <h3> When? </h3>
+            <label for="start"></label>
+            <input type="date" id="data" name="calendar" value="2020-01-01" min="2020-01-01" max="2022-03-08">
+        </div>
 
-        <input type="date" id="start" name="trip-start" value="2018-07-22" min="2020-01-01" max="2022-03-08">
+        <div class="vaccine">
+            <h3> Have you been vaccinated? </h3>
+            <label for="myRadioId6" class="radio">
+                <input type="radio" name="myRadioField2" id="myRadioId6" class="radio__input">
+                <div class="radio__radio"></div>
+                Yes
+
+            </label>
+            <label for="myRadioId7" class="radio">
+                <input type="radio" name="myRadioField2" id="myRadioId7" class="radio__input">
+                <div class="radio__radio"></div>
+                No
+
+            </label>
+
+        </div>
+        <div class="vaccine_time">
+            <h3> When did you get your last covid vaccine? </h3>
+            <label for="start"></label>
+            <input type="date" id="data" name="calendar1" value="2020-01-01" min="2020-01-01" max="2022-03-08">
+        </div>
+
+
     </form>
+    <div class="paging" id="pagin">
+        <button id="prev">&#8249;</button>
+        <div class="dot filled"></div>
+        <div class="dot filled"></div>
+        <div class="dot filled"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <button id="next">&#8250;</button>
+    </div>
+
 </body>
 <script defer src="../scripts/script3.js"></script>
 

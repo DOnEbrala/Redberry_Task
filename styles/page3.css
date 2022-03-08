@@ -71,7 +71,6 @@ body {
   height: 157px;
   left: 166px;
   top: 301px;
-  
 }
 .covid {
   display: flex;
@@ -120,4 +119,79 @@ body {
 
 .radio__input:checked + .radio__radio::after {
   transform: scale(1);
+}
+
+.time {
+  font-family: Montserrat;
+  font-style: Regular;
+
+  position: absolute;
+  width: 455px;
+  height: 54px;
+  left: 166px;
+  top: 675px;
+}
+
+#data {
+  width: 450px;
+  height: 20px;
+  padding: 20px;
+  border: 0px;
+}
+
+.vaccine {
+  font-family: Montserrat;
+  font-style: Regular;
+
+  position: absolute;
+  width: 645px;
+  height: 119px;
+  left: 166px;
+  top: 825px;
+  display: flex;
+  flex-direction: column;
+}
+
+.vaccine_time {
+  font-family: Montserrat;
+  font-style: Regular;
+  position: absolute;
+  width: 645px;
+  height: 121px;
+  left: 166px;
+  top: 1029px;
+}
+.form3 {
+  position: relative;
+}
+
+.paging {
+  display: flex;
+  margin-top: auto;
+
+  position: absolute;
+  width: 231px;
+  height: 19px;
+  left: 294px;
+  top: 1292px;
+}
+
+.paging .dot {
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background: #fe3b1f;
+  opacity: 0.1;
+}
+
+.paging .dot.filled {
+  opacity: 1;
+}
+
+.paging > *:not(:last-child) {
+  margin-right: 15px;
+}
+
+.paging button {
+  cursor: pointer;
 }
