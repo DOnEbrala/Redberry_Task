@@ -1,0 +1,59 @@
+body {
+  background: linear-gradient(
+    to right,
+    white 0%,
+    white 50%,
+    #0c0d0e 0%,
+    #151718 73%
+  );
+}
+
+.whitetitle {
+  position: absolute;
+  width: 716px;
+  height: 128px;
+  left: 105px;
+  top: 131px;
+
+  font-family: Rowdies;
+  font-style: Regular;
+  font-size: 64px;
+  line-height: 79px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #fe3b1f;
+}
+.blacktitle {
+  position: absolute;
+  width: 716px;
+  height: 128px;
+  left: 1116px;
+  top: 129px;
+
+  font-family: Rowdies;
+  font-style: Regular;
+  font-size: 64px;
+  line-height: 79px;
+  line-height: 100%;
+  align: left;
+  vertical-align: central;
+  color: #fe3b1f;
+}
+.origins {
+  position: absolute;
+  width: 705px;
+  height: 606px;
+  top: 335px;
+  left: 1119px;
+
+  font-family: Montserrat;
+  font-style: Regular;
+  font-size: 24px;
+  line-height: 48px;
+  line-height: 200%;
+  align: Left;
+  vertical-align: Center;
+  letter-spacing: 5%;
+  color: #ffffff;
+}

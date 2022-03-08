@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+ 
+  font-style: normal;
+  font-weight: normal;
+
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(
+    to right,
+    white 0%,
+    white 50%,
+    #0c0d0e 0%,
+    #151718 73%
+  );
+  display: flex;
+}
+
+.left,
+.right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 100px 0;
+}
+
+.title {
+  width: 80%;
+  font-family: Rowdies;
+  color: #FE3B1F;
+  font-size: 64px;
+  line-height: 79px;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 50px;
+}
+
+.text {
+  width: 80%;
+  font-family: Montserrat;
+  font-size: 24px;
+  line-height: 200%;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+}
+
+.form-control {
+  width: 455px;
+  height: 54px;
+  position: relative;
+  border: 1px solid #525557;
+  padding-left: 45px;
+}
+
+.form-control:last-child {
+  display: flex;
+  align-items: center;
+} 
+
+.form-control:last-child p {
+  margin-right: 5px;
+}
+
+.form-control:not(:last-child){
+  margin-bottom: 37px;
+  
+}
+
+.form-control input{
+  width: 100%;
+  height: 100%;
+  
+  border: none;
+  outline: none;
+}
+
+.form-control input:focus {
+  border: none;
+  outline: none;
+}
+
+.form-control small {
+  position: absolute;
+  left: 45px;
+  bottom: -20px;
+  display: none;
+}
+
+.form-control input,
+.form-control small,
+.form-control p {
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.paging {
+  display: flex;
+  margin-top: auto;
+}
+
+.paging .dot {
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background: #FE3B1F;
+  opacity: 0.1;
+}
+
+.paging .dot.filled {
+  opacity: 1;
+}
+
+.paging > *:not(:last-child) {
+  margin-right: 15px;
+}
+
+.paging button {
+  cursor: pointer;
+}
+
+
+
+
+
+
+/* body {
+  background: linear-gradient(
+    to right,
+    white 0%,
+    white 50%,
+    #0c0d0e 0%,
+    #151718 73%
+  );
+}
+
+.whitetitle {
+  position: absolute;
+  width: 716px;
+  height: 128px;
+  left: 105px;
+  top: 131px;
+
+  font-family: Rowdies;
+  font-style: Regular;
+  font-size: 64px;
+  line-height: 79px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #fe3b1f;
+}
+.blacktitle {
+  position: absolute;
+  width: 716px;
+  height: 128px;
+  left: 1116px;
+  top: 129px;
+
+  font-family: Rowdies;
+  font-style: Regular;
+  font-size: 64px;
+  line-height: 79px;
+  line-height: 100%;
+  align: left;
+  vertical-align: central;
+  color: #fe3b1f;
+}
+.origins {
+  position: absolute;
+  width: 705px;
+  height: 606px;
+  top: 335px;
+  left: 1119px;
+
+  font-family: Montserrat;
+  font-style: Regular;
+  font-size: 24px;
+  line-height: 48px;
+  line-height: 200%;
+  align: Left;
+  vertical-align: Center;
+  letter-spacing: 5%;
+  color: #ffffff;
+}
+
+#fname {
+  position: absolute;
+  width: 455px;
+  height: 54px;
+  left: 235px;
+  top: 390px;
+
+  background: #ffffff;
+
+  border: 1px solid #525557;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+#lname {
+  position: absolute;
+  width: 455px;
+  height: 54px;
+  left: 235px;
+  top: 481px;
+
+  background: #ffffff;
+
+  border: 1px solid #525557;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+#email {
+  position: absolute;
+  width: 455px;
+  height: 54px;
+  left: 235px;
+  top: 570px;
+
+  background: #ffffff;
+
+  border: 1px solid #525557;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+#number {
+  position: absolute;
+  width: 455px;
+  height: 54px;
+  left: 235px;
+  top: 675px;
+
+  background: #ffffff;
+
+  border: 1px solid #525557;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+a:hover {
+  background-color: #ddd;
+  color: #fe3b1f;
+}
+.previous {
+  color: #fe3b1f;
+}
+.next {
+  color: #fe3b1f;
+}
+.pagebuttons {
+  position: absolute;
+  width: 231px;
+  height: 19px;
+  left: 412px;
+  top: 800px;
+}
+
+.form-control.error small {
+  visibility: visible;
+}
+
+.form-control small {
+  color: #e74c3c;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+} */
