@@ -5,11 +5,11 @@ const prevButton = document.getElementById("prev");
 const addedSkills=document.getElementById("added-skills");
 const experience=document.getElementById("experience");
 const pageData = getPageFromStorage('page2');
+var   fetchedData;
 const skills=[];
  
-
+debugger
 if(pageData!=null){
-  debugger
   addedSkills.innerHTML='';
   for(let i=0; i<pageData.length; i++){
     let skill=pageData[i];
@@ -29,6 +29,7 @@ const myHeader = new Headers({
 
 FetchSkills()
   .then(data => {
+    fetchedData=data;
     for (var i = 0; i<data.length; i++){
       let opt = document.createElement('option');
       opt.value = data[i].title;
@@ -50,14 +51,12 @@ addButton.addEventListener("click", function (e) {
   
   addedSkills.appendChild(skillToAppend);
 
-  debugger
   savePageToStorage('page2', skills);
 
   experience.value='';
 })
 
 addedSkills.addEventListener("click", function(e){
-  debugger
   const isRemoveButton=e.target.className==='remove-button'
   
   if(!isRemoveButton)
@@ -87,13 +86,23 @@ prevButton.addEventListener("click", function (e) {
 
 
 function getNewSkill(lang, exp){
-
+  debugger
+  let skillId=findIdOfSkill(lang);
   return {
+    'id':skillId,
     'lang':lang,
     'exp':exp
   }
 }
 
+function findIdOfSkill(skillName){
+  for(let i=0; i<fetchedData.length; i++){
+      if(fetchedData[i].title==skillName){
+        return fetchedData[i].id;
+      }      
+  }
+  return -1;
+}
 
 function generateSkill(lang, exp, index){
   let selectedLangauge=lang;

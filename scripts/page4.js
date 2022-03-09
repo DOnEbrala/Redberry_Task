@@ -32,6 +32,8 @@ nextButton.addEventListener("click", function (e) {
 
 
 prevButton.addEventListener("click", function (e) {
+    e.preventDefault();
+
     location.href = '../pages/Page3.html';
 })
   
