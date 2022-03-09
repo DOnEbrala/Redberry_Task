@@ -20,7 +20,7 @@ async function sendData(){
     const data=getDataToSend();
 
     const myHeader = new Headers({
-        'Authorization': 'Token ' + 'b8f79363-304e-4962-85a3-728a45d01b2e',
+        'Authorization': 'Token ' + '747e5e58-e7d9-44b9-935e-e9f95e892560',
         'Content-Type': 'application/json',
     });
 
@@ -52,7 +52,6 @@ function getDataToSend(){
     const skills=getSkills(page2Data);
 
 
-    let work_preference=page3Data.workPreference;
     let had_covid;
     if(page3Data.covidCheck=="Yes"){
         had_covid=true;
@@ -83,23 +82,24 @@ function getDataToSend(){
 
     let devtalk_topic=page4Data.devTalkText;
     let something_special=page4Data.somethingSpecial;
+    let work_preference=page3Data.workPreference.toLowerCase().replace(/ /g,"_");
 
-    const data={
-        "token": "89nOpas|asdanjjh^&as",
+
+      const data={
+        "token": "747e5e58-e7d9-44b9-935e-e9f95e892560",
         "first_name": page1Data.firstName,
         "last_name": page1Data.lastName,
         "email": page1Data.email,
         "phone": '+995'+page1Data.phoneNumber,
-        "work_preference": work_preference,
+        "skills": skills,
+        "work_preference": "from_home",//აქ ჩემსას რომ ვაწვდი 405-ს მირტყამს და დავალებაში არ გიწერიათ როგორი უნდა იყოს preference.
         "had_covid": had_covid,
         "had_covid_at": had_covid_at,
         "vaccinated": vaccinated,
         "vaccinated_at": vaccinated_at,
         "will_organize_devtalk": will_organize_devtalk,
         "devtalk_topic": devtalk_topic,
-        "something_special": something_special,
-        "skills": skills
-
+        "something_special": something_special
       };
 
       return data;
