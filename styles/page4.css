@@ -38,7 +38,6 @@ body {
   font-size: 64px;
   line-height: 79px;
   line-height: 100%;
-  align: left;
   vertical-align: central;
   color: #fe3b1f;
 }
@@ -54,23 +53,24 @@ body {
   font-size: 24px;
   line-height: 48px;
   line-height: 200%;
-  align: Left;
   vertical-align: Center;
   letter-spacing: 5%;
   color: #ffffff;
 }
-.radiobox {
-  display: flex;
-  flex-direction: column;
-
+.container {
   font-family: Montserrat;
   font-style: Regular;
-
   position: absolute;
   width: 645px;
   height: 157px;
   left: 166px;
   top: 301px;
+}
+
+.radiobox{
+  display: flex;
+  flex-direction: column;
+  
 }
 .radio {
   display: inline-flex;
@@ -111,13 +111,11 @@ body {
 }
 
 .form-talk {
-  position: absolute;
-  width: 535px;
-  height: 122px;
-  left: 0px;
-  top: 225px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
 }
-#devtalk {
+#devtalk-text {
   width: 535px;
   height: 122px;
   left: 153px;
@@ -127,13 +125,12 @@ body {
   box-sizing: border-box;
 }
 .form-talk1 {
-  position: absolute;
-  width: 535px;
-  height: 89px;
-  left: 0px;
-  top: 460px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+
 }
-#devtalk1 {
+#somethingSpecial {
   width: 535px;
   height: 80px;
   left: 153px;
@@ -145,11 +142,7 @@ body {
 .paging {
   display: flex;
   margin-top: 40px;
-  position: absolute;
 
-  width: 231px;
-  left: 70px;
-  top: 600px;
   padding: 100px;
 }
 
@@ -183,4 +176,40 @@ body {
   margin: 4px 2px;
   width: 25px;
   border: none;
+}
+
+textarea {
+  border: none;
+  overflow: auto;
+  outline: none;
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+
+  resize: none; /*remove the resize handle on the bottom right*/
+  padding-top: 20px;
+  padding-left: 10px;
+
+}
+
+.hide{
+  display: none;
+}
+
+small{
+  visibility: hidden;
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  
+}
+
+
+.validationBox.error small {
+  visibility: visible;
+  color: #e74c3c;
+  left: 45px;
 }

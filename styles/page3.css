@@ -54,12 +54,31 @@ body {
   font-size: 24px;
   line-height: 48px;
   line-height: 200%;
-  align: Left;
   vertical-align: Center;
   letter-spacing: 5%;
   color: #ffffff;
 }
-.radiobox {
+
+small{
+  visibility: hidden;
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  
+}
+
+.validationBox.error small {
+  visibility: visible;
+  color: #e74c3c;
+  left: 45px;
+  bottom: -20px;
+}
+
+
+
+.workCheck {
   display: flex;
   flex-direction: column;
 
@@ -133,13 +152,15 @@ body {
   top: 675px;
 }
 
-#data {
+.data {
   width: 450px;
   height: 20px;
   padding: 20px;
   border: 0px;
   border: 2px solid #fe3b1f;
   box-shadow: #151718;
+  margin-top: 5px;
+
 }
 
 .vaccine {
@@ -164,6 +185,8 @@ body {
   left: 166px;
   top: 1029px;
 }
+
+
 .form3 {
   position: relative;
 }

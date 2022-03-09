@@ -1,11 +1,11 @@
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body,
-html {
+body, html {
   height: 100%;
 }
 html {
@@ -14,12 +14,15 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+
 }
 
-.title {
+
+
+.title{
   width: 80%;
   font-family: Rowdies;
-  color: #fe3b1f;
+  color: #FE3B1F;
   font-size: 64px;
   line-height: 79px;
   text-align: center;
@@ -29,7 +32,7 @@ html {
   margin-bottom: 40px;
 }
 
-.start-section {
+.start-section{
   height: 100%;
 
   display: flex;
@@ -38,6 +41,7 @@ html {
   align-items: center;
   flex-direction: column;
   flex-shrink: 0;
+
 }
 
 #space {
@@ -51,11 +55,12 @@ html {
   padding-top: 40px;
   margin-bottom: 20px;
 }
-#rocketman {
+#rocketman{
   height: 250px;
   width: 100%;
+
 }
-#rocketman-img {
+#rocketman-img{
   height: 250px;
   margin-left: auto;
   margin-right: auto;
@@ -63,7 +68,7 @@ html {
   margin-bottom: 40px;
 }
 #start-button {
-  width: 275px;
+  width: 275px ;
   height: 79px;
   margin-top: 150px;
   background: #fe3b1f;
@@ -89,12 +94,13 @@ a {
   color: #ffffff;
   text-decoration: underline;
   letter-spacing: 0.05em;
+
 }
 
 a:hover {
-  color: #ffffff;
+  color:#ffffff;
   text-decoration: underline;
   letter-spacing: 0.05em;
 
-  cursor: pointer;
+  cursor:pointer;  
 }

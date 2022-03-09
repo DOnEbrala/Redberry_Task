@@ -28,35 +28,36 @@
     </div>
     <div class="left">
         <form id="form4">
-            <div class="radiobox">
-                <h3>Would you attend Devtalks and maybe also organize your own?</h3>
-                <label for="myRadioId" class="radio">
-                    <input type="radio" name="myRadioField" id="myRadioId" class="radio__input">
-                    <div class="radio__radio"></div>
-                    Yes
-
-                </label>
-                <label for="myRadioId2" class="radio">
-                    <input type="radio" name="myRadioField" id="myRadioId2" class="radio__input">
-                    <div class="radio__radio"></div>
-                    No
-
-                </label>
-                <div class="form-talk">
+            <div class="container">
+                <div class="radiobox validationBox">
+                    <h3>Would you attend Devtalks and maybe also organize your own?</h3>
+                    <small>Field Is Required</small>
+                    <label for="myRadioId" class="radio">
+                        <input type="radio" name="devTalk" id="myRadioId" class="radio__input" value="Yes">
+                        <div class="radio__radio"></div>
+                        Yes
+    
+                    </label>
+                    <label for="myRadioId2" class="radio">
+                        <input type="radio" name="devTalk" id="myRadioId2" class="radio__input" value="No">
+                        <div class="radio__radio"></div>
+                        No
+                    </label>
+                </div>
+                
+                <div id="devTalkWrapper" class="form-talk validationBox hide">
                     <h3> What would you speak about at Devtalk? </h3>
-                    <input id="devtalk" name="Mydevtalk" type="text" placeholder="I would..">
+                    <textarea cols="80" rows="10" id="devtalk-text" type="text" placeholder="I would.." ></textarea>
+                    <small>Field Is Required</small>
+                    
                 </div>
-                <div class="form-talk1">
+                <div  id='somethingSpecialWrapper'class="form-talk1 validationBox">
                     <h3> Tell us something special </h3>
-                    <input id="devtalk1" name="Mydevtalk1" type="text" placeholder="I..">
+                    <textarea cols="80" rows="10" id="somethingSpecial" type="text" placeholder="I.." ></textarea>
+                    <small>Field Is Required</small>                    
                 </div>
+            <div>
         </form>
-
-
-
-
-
-
 
         <div class="paging" id="pagin">
             <button id="prev">&#8249;</button>
@@ -69,7 +70,8 @@
         </div>
 </body>
 
-<script defer src="../scripts/script4.js"></script>
+<script defer src="../scripts/storageController.js"></script>
 
+<script defer src="../scripts/page4.js"></script>
 
 </html>

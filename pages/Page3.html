@@ -26,37 +26,39 @@
         think face-to-face communications > Zoom meetings. Both on the fun and productivity scales.
     </div>
     <form id="form3">
-        <div id="error"></div>
-        <div class="radiobox">
+        <div class="validationBox workCheck">
             <h3>How would you prefer to work?</h3>
+            <small>Error message</small>
             <label for="myRadioId" class="radio">
-                <input type="radio" name="myRadioField" id="myRadioId" class="radio__input">
+                <input type="radio" name="workPlace" id="myRadioId1" class="radio__input" value="From Sairme Office">
                 <div class="radio__radio"></div>
                 From Sairme Office
             </label>
             <label for="myRadioId2" class="radio">
-                <input type="radio" name="myRadioField" id="myRadioId2" class="radio__input">
+                <input type="radio" name="workPlace" id="myRadioId2" class="radio__input" value="From Home">
                 <div class="radio__radio"></div>
                 From Home
 
             </label>
             <label for="myRadioId3" class="radio">
-                <input type="radio" name="myRadioField" id="myRadioId3" class="radio__input">
+                <input type="radio" name="workPlace" id="myRadioId3" class="radio__input" value="Hybrid">
                 <div class="radio__radio"></div>
                 Hybrid
 
             </label>
         </div>
-        <div class="covid">
+        <div class="validationBox covid">
             <h3> Did you contact covid 19? :( </h3>
+            <small>Error message</small>
+
             <label for="myRadioId4" class="radio">
-                <input type="radio" name="myRadioField1" id="myRadioId4" class="radio__input">
+                <input type="radio" name="covidCheck" id="myRadioId4" class="radio__input" value="Yes">
                 <div class="radio__radio"></div>
                 Yes
 
             </label>
             <label for="myRadioId5" class="radio">
-                <input type="radio" name="myRadioField1" id="myRadioId5" class="radio__input">
+                <input type="radio" name="covidCheck" id="myRadioId5" class="radio__input" value="No">
                 <div class="radio__radio"></div>
                 No
 
@@ -64,32 +66,40 @@
 
         </div>
 
-        <div class="time">
+        <div class="validationBox time">
             <h3> When? </h3>
+            <small>Error message</small>
+
             <label for="start"></label>
-            <input type="date" id="data" name="calendar" value="2020-01-01" min="2020-01-01" max="2022-03-08">
+            <input type="date" id="covidDate" class="data" name="calendar" value="2020-01-01" min="2020-01-01" max="2022-03-08">
         </div>
 
-        <div class="vaccine">
+        <div class="validationBox vaccine">
             <h3> Have you been vaccinated? </h3>
+            <small>Error message</small>
+
             <label for="myRadioId6" class="radio">
-                <input type="radio" name="myRadioField2" id="myRadioId6" class="radio__input">
+                <input type="radio" name="vaccineCheck" id="myRadioId6" class="radio__input" value="Yes">
                 <div class="radio__radio"></div>
                 Yes
 
             </label>
             <label for="myRadioId7" class="radio">
-                <input type="radio" name="myRadioField2" id="myRadioId7" class="radio__input">
+                <input type="radio" name="vaccineCheck" id="myRadioId7" class="radio__input" value="No">
                 <div class="radio__radio"></div>
                 No
 
             </label>
 
         </div>
-        <div class="vaccine_time">
-            <h3> When did you get your last covid vaccine? </h3>
+        <div class="validationBox vaccine_time">
+            <div >
+                <h3> When did you get your last covid vaccine? </h3>
+                <small>Error message</small>
+            </div>
+            
             <label for="start"></label>
-            <input type="date" id="data" name="calendar1" value="2020-01-01" min="2020-01-01" max="2022-03-08">
+            <input type="date" id="vaccineDate" class="data" name="calendar1" value="2020-01-01" min="2020-01-01" max="2022-03-08">
         </div>
 
 
@@ -105,6 +115,8 @@
     </div>
 
 </body>
-<script defer src="../scripts/script3.js"></script>
+<script defer src="../scripts/storageController.js"></script>
+
+<script defer src="../scripts/page3.js"></script>
 
 </html>
