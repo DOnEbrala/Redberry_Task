@@ -9,6 +9,7 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  box-sizing: border-box;
   background: radial-gradient(50% 50% at 50% 50%, #0c0d0e 0%, #151718 73.44%);
 }
 

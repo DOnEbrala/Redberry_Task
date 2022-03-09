@@ -3,9 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>CV_FORM</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/page1.css">
     <link rel="stylesheet" href="../styles/page2.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rowdies&display=swap" rel="stylesheet">
@@ -13,21 +15,63 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Rowdies&display=swap"
         rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>CV_FORM</title>
 </head>
 
 <body>
-    <div class="whitetitle">Tell us about your skills</div>
-    <div class="blacktitle">A bit about our battles</div>
-    <div class="origins">
-        As we said, Redberry has been on the field for quite some time now, and we have touched and embraced a variety
-        of programming languages, technologies, philosophies, and frameworks. We are battle-tested in PHP Laravel Stack
-        with Vue.js, refined in React, and allies with Serverside technologies like Docker and Kubernetes, and now we
-        have set foot in the web3 industry.
+    <div class="left">
+        <h1 class="title">Tell Us About Your Skills</h1>
+        <div class="form">
+            <div class="form-control">
+                <select id="list">
+                    <option value="test">test</option>
+                    <option value="test2">test2</option>
+                </select>
+            </div>
+
+            <div class="form-control">
+                <input id="experience" name="experience" type="text" placeholder="Experience Duration In Years">
+            </div>
+
+
+        </div>
+        <div id="addSkills">
+            <button id="add-button">Add Programming Language</button>
+        </div>
+        <div id="added-skills">
+
+        </div>
+
+
+        <div class="paging" id="paging">
+            <button id="prev">&#8249;</button>
+            <div class="dot filled"></div>
+            <div class="dot filled"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <button id="next">&#8250;</button>
+        </div>
     </div>
 
-    <div id="testID">TestContent</div>
-
+    <div class="right">
+        <h1 class="title">A Bit About Our Battles</h1>
+        <p class="text">
+            As we said, Redberry has been on the field for quite some time now,
+            and we have touched and embraced
+            a variety of programming languages, technologies,
+            philosophies, and frameworks. We are battle-tested
+            in PHP Laravel Stack with Vue.js, refined in React,
+            and allies with Serverside technologies like Docker
+            and Kubernetes, and now we have set foot in
+            the web3 industry.
+        </p>
+    </div>
 </body>
-<script defer src="../scripts/script2.js"></script>
+<script defer src="../scripts/storageController.js"></script>
+<script defer src="../scripts/page2.js"></script>
 
 </html>
