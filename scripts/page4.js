@@ -14,7 +14,8 @@ const dataToSave={};
 
 
 if(pageData!=null){
-    //loadPage(pageData);
+    debugger
+    loadPage(pageData);
 }
 
 
@@ -105,14 +106,13 @@ function setErrorFor(input, message) {
   
 
   function loadPage(data){
-    let workPlaceCheckBox=document.querySelectorAll('[value="'+data.workPreference+'"]')[0];
-    workPlaceCheckBox.checked=true;
-    let vaccineCheckBox=document.querySelectorAll('[value="'+data.vaccineCheck+'"]')[0];
-    vaccineCheckBox.checked=true;
-    let covidCheckBox=document.querySelectorAll('[value="'+data.covidCheck+'"]')[1];
-    covidCheckBox.checked=true;
+    let devTalkRadioBox=document.querySelectorAll('[value="'+data.devTalkRadioBox+'"]')[0];
+    devTalkRadioBox.checked=true;
+    if(radioBox1.checked==true){
+        devTalkWrapper.classList.remove("hide");
+    }
     
-    covidDate.value=data.covidDate;
-    vaccineDate.value=data.vaccineDate;
+    devTalkText.value=data.devTalkText;
+    somethingSpecial.value=data.somethingSpecial;
 
   }
