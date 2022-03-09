@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background: radial-gradient(50% 50% at 50% 50%, #0c0d0e 0%, #151718 73.44%);
+}
+.thank {
+  font-family: "Montserrat", sans-serif;
+  font-family: "Rowdies", cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  color: #fe3b1f;
+  position: relative;
+  text-align: center;
+  top: 350px;
+}

@@ -4,67 +4,23 @@
   box-sizing: border-box;
 }
 
-body,
-html {
-  height: 100%;
-}
 html {
   min-height: 100%;
-  background-image: url(../Image/Space.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  background: radial-gradient(50% 50% at 50% 50%, #0c0d0e 0%, #151718 73.44%);
 }
 
-.title {
-  width: 80%;
-  font-family: "Montserrat", sans-serif;
-  font-family: "Rowdies", cursive;
-  color: #fe3b1f;
-  font-size: 64px;
-  line-height: 79px;
+#submit,
+#back {
+  position: relative;
   text-align: center;
-  padding: 0;
-  margin: 0;
-  margin-top: 80px;
-  margin-bottom: 40px;
+  top: 225px;
+  margin-bottom: 45px;
+  font-size: 12px;
 }
-
-.start-section {
-  height: 100%;
-
-  display: flex;
-
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  flex-shrink: 0;
-}
-
-#space {
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-#start {
-}
-#submited-list {
-  height: 80px;
-  padding-top: 40px;
-  margin-bottom: 20px;
-}
-#rocketman {
-  height: 250px;
-  width: 100%;
-}
-#rocketman-img {
-  height: 250px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  margin-bottom: 40px;
-}
-#start-button {
+#submit-button {
   width: 275px;
   height: 79px;
   margin-top: 150px;
@@ -76,7 +32,7 @@ html {
   font-style: normal;
   font-family: "Montserrat", sans-serif;
   font-family: "Rowdies", cursive;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 700;
   line-height: 24px;
   opacity: 1;
@@ -88,11 +44,12 @@ html {
   word-break: break-word;
   border: 0;
 }
+
 a {
   color: #ffffff;
   text-decoration: underline;
   letter-spacing: 0.05em;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 a:hover {

@@ -72,25 +72,13 @@ body {
   left: 166px;
   top: 301px;
 }
-.covid {
-  display: flex;
-  flex-direction: column;
-  font-family: Montserrat;
-  font-style: Regular;
-  position: absolute;
-  width: 645px;
-  height: 119px;
-  left: 166px;
-  top: 509px;
-}
-
 .radio {
   display: inline-flex;
   align-items: center;
   cursor: pointer;
   margin-right: 10px;
   margin-bottom: 10px;
-  margin-top: 15px;
+  margin-top: 25px;
 }
 .radio__input {
   display: none;
@@ -122,60 +110,46 @@ body {
   transform: scale(1);
 }
 
-.time {
-  font-family: Montserrat;
-  font-style: Regular;
-
+.form-talk {
   position: absolute;
-  width: 455px;
-  height: 54px;
-  left: 166px;
-  top: 675px;
+  width: 535px;
+  height: 122px;
+  left: 0px;
+  top: 225px;
 }
+#devtalk {
+  width: 535px;
+  height: 122px;
+  left: 153px;
+  top: 572px;
 
-#data {
-  width: 450px;
-  height: 20px;
-  padding: 20px;
-  border: 0px;
-  border: 2px solid #fe3b1f;
-  box-shadow: #151718;
+  border: 1px solid #525557;
+  box-sizing: border-box;
 }
-
-.vaccine {
-  font-family: Montserrat;
-  font-style: Regular;
-
+.form-talk1 {
   position: absolute;
-  width: 645px;
-  height: 119px;
-  left: 166px;
-  top: 825px;
-  display: flex;
-  flex-direction: column;
+  width: 535px;
+  height: 89px;
+  left: 0px;
+  top: 460px;
 }
+#devtalk1 {
+  width: 535px;
+  height: 80px;
+  left: 153px;
+  top: 572px;
 
-.vaccine_time {
-  font-family: Montserrat;
-  font-style: Regular;
-  position: absolute;
-  width: 645px;
-  height: 121px;
-  left: 166px;
-  top: 1029px;
+  border: 1px solid #525557;
+  box-sizing: border-box;
 }
-.form3 {
-  position: relative;
-}
-
 .paging {
   display: flex;
   margin-top: 40px;
   position: absolute;
 
   width: 231px;
-  left: 200px;
-  top: 1175px;
+  left: 70px;
+  top: 600px;
   padding: 100px;
 }
 
